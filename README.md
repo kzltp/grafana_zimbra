@@ -12,6 +12,7 @@ cp grafana_zimbra-main/checkzimbraversion.sh /opt/zimbra/common/bin/
 chmod +rwxr+xr+x /opt/zimbra/common/bin/checkzimbrastatus.sh
 chmod +rwxr+xr+x /opt/zimbra/common/bin/checkzimbraversion.sh
 echo "* * * * * /usr/sbin/service zimbra status > /tmp/status.tmp" >> /etc/crontab
+sudo systemctl start crond.service
 ```
 and import Zimbra-Dasboard.json file on grafana.
 
