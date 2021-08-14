@@ -13,4 +13,5 @@ echo "* * * * * /usr/sbin/service zimbra status > /tmp/status.tmp" >> /etc/cront
 ```
 and import Zimbra-Dasboard.json file on grafana.
 
-![alt text](https://ibb.co/4NR4nzn)
+![Screenshot](screenshot.png)
+
