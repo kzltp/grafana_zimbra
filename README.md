@@ -11,7 +11,11 @@ cp  grafana_zimbra-main/checkzimbrastatus.sh /opt/zimbra/common/bin/
 cp grafana_zimbra-main/checkzimbraversion.sh /opt/zimbra/common/bin/
 chmod +rwxr+xr+x /opt/zimbra/common/bin/checkzimbrastatus.sh
 chmod +rwxr+xr+x /opt/zimbra/common/bin/checkzimbraversion.sh
-echo "* * * * * /usr/sbin/service zimbra status > /tmp/status.tmp" >> /etc/crontab
+crontab -e
+
+# Insert cron rule
+* * * * * /usr/sbin/service zimbra status > /tmp/status.tmp
+
 sudo systemctl restart crond.service
 sudo systemctl restart telegraf
 ```
