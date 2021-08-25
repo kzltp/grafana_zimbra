@@ -7,7 +7,6 @@ wget https://github.com/kzltp/grafana_zimbra/archive/refs/heads/main.zip
 unzip main.zip
 mv /etc/telegraf/telegraf.conf /etc/telegraf/telegraf.conf_ori
 cp grafana_zimbra-main/telegraf.conf /etc/telegraf
-sudo systemctl restart telegraf
 ```
 
 #### You should update some lines in telegraf.conf. 
